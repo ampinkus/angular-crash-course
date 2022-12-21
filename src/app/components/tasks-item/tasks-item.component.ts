@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Task } from 'src/app/Task';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-tasks-item',
@@ -9,6 +10,7 @@ import { Task } from 'src/app/Task';
 export class TasksItemComponent implements OnInit {
   // we want to have individual access to each task
   @Input() task!: Task;
+  faTimes = faTimes; // to use Awesome Fonts
 
   constructor() {}
 
