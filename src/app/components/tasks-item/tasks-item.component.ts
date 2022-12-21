@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,9 +10,14 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TasksItemComponent implements OnInit {
   // we want to have individual access to each task
   @Input() task!: Task;
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter(); // we want to export the Delete Task event
   faTimes = faTimes; // to use Awesome Fonts
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(task: any) {
+    this.onDeleteTask.emit(task);
+  }
 }
