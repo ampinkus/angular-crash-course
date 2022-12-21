@@ -1,1 +1,9 @@
-<p>button works!</p>
+<!-- Property directive for CSS inline styling: [ngStyle]="{ 'background-color': color }"    -->
+<!-- Event directive (click)="OnClick()" when we click the button we call the function onClick() in button.component.ts  -->
+<button
+  [ngStyle]="{ 'background-color': color }"
+  class="btn"
+  (click)="onClick()"
+>
+  {{ text }}
+</button>

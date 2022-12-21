@@ -1,3 +1,10 @@
 <header>
   <h1>{{ title }}</h1>
+  <!-- I will reuse the button component passing some parameters -->
+  <!-- the (btnClick)="toggleAddTask" call the toggleAddTask method when we click the button  -->
+  <app-button
+    color="green"
+    text="Add"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
 </header>

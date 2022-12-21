@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  // a variable that contains the title
   title: string = 'Task Tracker';
   constructor() {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  ngOnInit(): void {}
+
+  toggleAddTask() {
+    console.log('toggle');
   }
 }
